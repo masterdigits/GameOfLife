@@ -37,6 +37,14 @@ class Map(MapAbstract):
 
         return new_map
 
+    def __printMap(self):
+        string = ''
+        for x in range(self.sizeX):
+            for y in range(self.sizeY):
+                string += str(self.Map[x][y])
+            string += '\n'
+        return string
+
 class Cell(CellAbstract):
 
     def __init__(self, alive):
